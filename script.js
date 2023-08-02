@@ -87,7 +87,12 @@ function joinRoom() {
     return;
   }
   room_id = room;
-  peer = new Peer();
+  peer = new Peer(room_id, {
+    host: "chat-qa.cht.com.tw",
+    port: 443,
+    path: "/service/peer",
+    debug: 3,
+  });
   peer.on("open", (id) => {
     console.log("Connected room with Id: " + id);
 
