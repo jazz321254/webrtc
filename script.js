@@ -19,7 +19,7 @@ function createRoom() {
   room_id = room;
   peer = new Peer(room_id, {
     host: "chat-qa.cht.com.tw",
-    port: 80,
+    port: 443,
     path: "/service/peer",
     debug: 3,
   });
